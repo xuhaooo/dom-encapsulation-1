@@ -1,2 +1,3 @@
-window.dom = {}
-dom.create = function() {}
+window.dom = {
+    create: function() {}
+}
