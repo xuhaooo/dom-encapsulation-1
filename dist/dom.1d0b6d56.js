@@ -128,6 +128,16 @@ window.dom = {
   },
   after: function after(node, node2) {
     node.parentNode.insertBefore(node2, node.nextSibling);
+  },
+  before: function before(node, node2) {
+    node.parentNode.insertBefore(node2, node);
+  },
+  append: function append(parent, node) {
+    parent.appendChild(node);
+  },
+  wrap: function wrap(node, parent) {
+    dom.before(node, parent);
+    dom.append(parent, node);
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
