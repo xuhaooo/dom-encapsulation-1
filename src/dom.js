@@ -5,5 +5,8 @@ window.dom = {
         // trim 一下，不然儿子一就是文本
         container.innerHTML = string.trim()
         return container.content.firstChild
+    },
+    after(node, node2){
+        node.parentNode.insertBefore(node2, node.nextSibling)
     }
 }

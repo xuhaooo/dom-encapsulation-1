@@ -122,6 +122,7 @@ var log = console.log.bind(console); // document.createElement('div')
 
 var div = dom.create('<td>hi</td>');
 log(div);
+dom.after(test, div);
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

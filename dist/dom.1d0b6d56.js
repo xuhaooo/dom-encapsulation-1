@@ -125,6 +125,9 @@ window.dom = {
 
     container.innerHTML = string.trim();
     return container.content.firstChild;
+  },
+  after: function after(node, node2) {
+    node.parentNode.insertBefore(node2, node.nextSibling);
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
