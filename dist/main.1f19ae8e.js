@@ -120,7 +120,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"main.js":[function(require,module,exports) {
 var log = console.log.bind(console); // document.createElement('div')
 
-var div = dom.create("div");
+var div = dom.create("<div><span>1</span></div>");
 log(div);
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

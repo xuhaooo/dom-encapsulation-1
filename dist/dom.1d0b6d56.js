@@ -119,8 +119,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"dom.js":[function(require,module,exports) {
 window.dom = {
-  create: function create(tagName) {
-    return document.createElement(tagName);
+  create: function create(string) {
+    var container = document.createElement('div');
+    container.innerHTML = string;
+    return container.children[0];
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
