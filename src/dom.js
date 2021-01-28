@@ -1,5 +1,5 @@
 window.dom = {
-    create() {
-
+    create(tagName) {
+        return document.createElement(tagName)
     }
 }

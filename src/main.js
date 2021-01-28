@@ -1,3 +1,4 @@
 const log = console.log.bind(console)
-
-log('哈哈')
+// document.createElement('div')
+const div = dom.create("div")
+log(div)
