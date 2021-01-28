@@ -18,5 +18,18 @@ window.dom = {
     wrap(node, parent){
         dom.before(node, parent)
         dom.append(parent, node)
+    },
+    remove(node){
+        node.parentNode.removeChild(node)
+        return node
+    },
+    empty(node){
+        const {childNodes} = node
+        const array = []
+        for(let i=0; i<childNodes.length; i++){
+            dom.remove(childNodes[i])
+            array.push(childNodes[i])
+        }
+        return array
     }
 }

@@ -138,6 +138,21 @@ window.dom = {
   wrap: function wrap(node, parent) {
     dom.before(node, parent);
     dom.append(parent, node);
+  },
+  remove: function remove(node) {
+    node.parentNode.removeChild(node);
+    return node;
+  },
+  empty: function empty(node) {
+    var childNodes = node.childNodes;
+    var array = [];
+
+    for (var i = 0; i < childNodes.length; i++) {
+      dom.remove(childNodes[i]);
+      array.push(childNodes[i]);
+    }
+
+    return array;
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
