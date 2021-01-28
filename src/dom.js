@@ -1,3 +1,5 @@
 window.dom = {
-    create: function() {}
+    create() {
+
+    }
 }
