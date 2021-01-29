@@ -20,3 +20,8 @@ dom.text(test, '你好这是新的内容')
 dom.style(test, {border: '1px solid red', color: 'blue'})
 log(dom.style(test, 'border'))
 dom.style(test, 'border', '1px solid black')
+
+dom.class.add(test, 'red')
+dom.class.add(test, 'blue')
+dom.class.remove(test, 'blue')
+log(dom.class.has(test, 'blue'))
