@@ -85,6 +85,11 @@ window.dom = {
         has(node, className){
             return node.classList.contains(className)
         }
+    },
+    on(node, eventName, fn){
+        node.addEventListener(eventName, fn)
+    },
+    off(node, eventName, fn){
+        node.removeEventListener(eventName, fn)
     }
-
 }
