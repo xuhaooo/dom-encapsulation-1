@@ -40,7 +40,11 @@ window.dom = {
         }
     },
     text(node, string){
-        node.innerText = string
+        if ('innerText' in node) {
+            node.innerText = string
+        }else{
+            node.textContent == string
+        }
     }
 
 }

@@ -162,7 +162,11 @@ window.dom = {
     }
   },
   text: function text(node, string) {
-    node.innerText = string;
+    if ('innerText' in node) {
+      node.innerText = string;
+    } else {
+      node.textContent == string;
+    }
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
