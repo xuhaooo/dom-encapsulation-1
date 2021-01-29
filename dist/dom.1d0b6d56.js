@@ -162,10 +162,18 @@ window.dom = {
     }
   },
   text: function text(node, string) {
-    if ('innerText' in node) {
-      node.innerText = string;
-    } else {
-      node.textContent == string;
+    if (arguments.length === 2) {
+      if ('innerText' in node) {
+        node.innerText = string;
+      } else {
+        node.textContent == string;
+      }
+    } else if (arguments.length === 1) {
+      if ('innerText' in node) {
+        return node.innerText;
+      } else {
+        return node.textContent;
+      }
     }
   }
 };
