@@ -125,6 +125,11 @@ log(div);
 dom.after(test, div);
 var div3 = dom.create('<div id="parent"></div>');
 dom.wrap(test, div3);
+var nodes = dom.empty(window.empty);
+log(nodes);
+dom.attr(test, 'title', 'Hi, I am Xu');
+var title = dom.attr(test, 'title');
+log("title: ".concat(title));
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -153,7 +158,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51834" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61752" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -144,15 +144,22 @@ window.dom = {
     return node;
   },
   empty: function empty(node) {
-    var childNodes = node.childNodes;
     var array = [];
+    var x = node.firstChild;
 
-    for (var i = 0; i < childNodes.length; i++) {
-      dom.remove(childNodes[i]);
-      array.push(childNodes[i]);
+    while (x) {
+      array.push(dom.remove(node.firstChild));
+      x = node.firstChild;
     }
 
     return array;
+  },
+  attr: function attr(node, name, value) {
+    if (arguments.length === 3) {
+      node.setAttribute(name, value);
+    } else if (arguments.length === 2) {
+      return node.getAttribute(name);
+    }
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -183,7 +190,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51834" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61752" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

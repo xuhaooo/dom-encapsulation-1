@@ -7,3 +7,10 @@ dom.after(test, div)
 
 const div3 = dom.create('<div id="parent"></div>')
 dom.wrap(test, div3)
+
+const nodes = dom.empty(window.empty)
+log(nodes)
+
+dom.attr(test, 'title', 'Hi, I am Xu')
+const title = dom.attr(test, 'title')
+log(`title: ${title}`)
