@@ -175,6 +175,28 @@ window.dom = {
         return node.textContent;
       }
     }
+  },
+  html: function html(node, string) {
+    if (arguments.length === 2) {
+      node.innerHTML = string;
+    } else if (arguments.length === 1) {
+      return node.innerHTML;
+    }
+  },
+  style: function style(node, name, value) {
+    if (arguments.length === 3) {
+      node.style[name] = value;
+    } else if (arguments.length === 2) {
+      if (typeof name === 'string') {
+        return node.style[name];
+      } else if (name instanceof Object) {
+        var object = name;
+
+        for (var key in object) {
+          node.style[key] = object[key];
+        }
+      }
+    }
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {

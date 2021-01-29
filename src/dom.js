@@ -54,5 +54,26 @@ window.dom = {
             }
         }
     },
+    html(node, string){
+        if(arguments.length === 2){
+            node.innerHTML = string
+        }else if(arguments.length === 1){
+            return node.innerHTML
+        }
+    },
+    style(node, name, value) {
+        if(arguments.length === 3){
+            node.style[name] = value
+        }else if(arguments.length === 2){
+            if(typeof name === 'string'){
+                return node.style[name]
+            }else if(name instanceof Object){
+                const object = name
+                for(let key in object){
+                    node.style[key] = object[key]
+                }
+            }
+        }
+    }
 
 }
