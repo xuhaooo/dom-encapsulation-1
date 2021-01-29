@@ -150,6 +150,10 @@ dom.on(test, 'click', fn);
 dom.off(test, 'click', fn);
 var testDiv = dom.find('#test')[0];
 log(testDiv);
+var test2 = dom.find('#test2')[0];
+var secondRed = dom.find('.red', test2)[0]; // 找的范围
+
+log(secondRed);
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

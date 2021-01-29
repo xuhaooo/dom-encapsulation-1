@@ -34,3 +34,6 @@ dom.off(test, 'click', fn)
 
 const testDiv = dom.find('#test')[0]
 log(testDiv)
+const test2 = dom.find('#test2')[0]
+const secondRed = dom.find('.red', test2)[0] // 找的范围
+log(secondRed)

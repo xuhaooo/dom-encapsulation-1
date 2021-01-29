@@ -216,8 +216,8 @@ window.dom = {
     node.removeEventListener(eventName, fn);
   },
   // 上面一直都是用全局 id 访问元素，现在实现“查”，即给一个“选择器”返回一个元素
-  find: function find(selector) {
-    return document.querySelectorAll(selector);
+  find: function find(selector, scope) {
+    return (scope || document).querySelectorAll(selector);
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
