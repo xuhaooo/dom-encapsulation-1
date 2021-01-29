@@ -238,6 +238,20 @@ window.dom = {
     }
 
     return x;
+  },
+  previous: function previous(node) {
+    var x = node.previousSibling;
+
+    while (x && x.nodeType === 3) {
+      x = x.previousSibling;
+    }
+
+    return x;
+  },
+  each: function each(nodeList, fn) {
+    for (var i = 0; i < nodeList.length; i++) {
+      fn.call(null, nodeList[i]);
+    }
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {

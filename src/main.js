@@ -43,3 +43,7 @@ log(dom.parent(test))
 const s2 = dom.find('#s2')[0]
 log(dom.siblings(s2))
 log(dom.next(s2))
+log(dom.previous(s2))
+
+const t = dom.find('#travel')[0]
+dom.each(dom.children(t), (n)=>dom.style(n, 'color', 'red'))
