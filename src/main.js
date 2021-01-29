@@ -14,3 +14,5 @@ log(nodes)
 dom.attr(test, 'title', 'Hi, I am Xu')
 const title = dom.attr(test, 'title')
 log(`title: ${title}`)
+
+dom.text(test, '你好这是新的内容')

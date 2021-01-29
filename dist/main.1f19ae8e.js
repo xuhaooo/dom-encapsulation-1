@@ -130,6 +130,7 @@ log(nodes);
 dom.attr(test, 'title', 'Hi, I am Xu');
 var title = dom.attr(test, 'title');
 log("title: ".concat(title));
+dom.text(test, '你好这是新的内容');
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

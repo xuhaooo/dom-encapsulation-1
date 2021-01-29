@@ -160,6 +160,9 @@ window.dom = {
     } else if (arguments.length === 2) {
       return node.getAttribute(name);
     }
+  },
+  text: function text(node, string) {
+    node.innerText = string;
   }
 };
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {

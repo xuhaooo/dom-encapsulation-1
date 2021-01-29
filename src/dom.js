@@ -38,6 +38,9 @@ window.dom = {
         }else if(arguments.length === 2){
             return node.getAttribute(name)
         }
+    },
+    text(node, string){
+        node.innerText = string
     }
 
 }
