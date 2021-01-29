@@ -148,6 +148,8 @@ var fn = function fn() {
 
 dom.on(test, 'click', fn);
 dom.off(test, 'click', fn);
+var testDiv = dom.find('#test')[0];
+log(testDiv);
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

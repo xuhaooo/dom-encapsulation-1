@@ -31,3 +31,6 @@ const fn = () => {
 }
 dom.on(test, 'click', fn)
 dom.off(test, 'click', fn)
+
+const testDiv = dom.find('#test')[0]
+log(testDiv)
