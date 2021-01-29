@@ -37,3 +37,9 @@ log(testDiv)
 const test2 = dom.find('#test2')[0]
 const secondRed = dom.find('.red', test2)[0] // 找的范围
 log(secondRed)
+
+log(dom.parent(test))
+
+const s2 = dom.find('#s2')[0]
+log(dom.siblings(s2))
+log(dom.next(s2))

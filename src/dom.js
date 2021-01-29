@@ -95,5 +95,22 @@ window.dom = {
     // 上面一直都是用全局 id 访问元素，现在实现“查”，即给一个“选择器”返回一个元素
     find(selector, scope){
         return (scope || document).querySelectorAll(selector)
+    },
+    parent(node){
+        return node.parentNode
+    },
+    children(node){
+        return node.children
+    },
+    siblings(node){
+        return Array.from(node.parentNode.children)
+        .filter(n=>n!==node)
+    },
+    next(node){
+        let x = node.nextSibling
+        while(x && x.nodeType === 3){
+            x = x.nextSibling
+        }
+        return x
     }
 }

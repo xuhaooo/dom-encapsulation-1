@@ -154,6 +154,10 @@ var test2 = dom.find('#test2')[0];
 var secondRed = dom.find('.red', test2)[0]; // 找的范围
 
 log(secondRed);
+log(dom.parent(test));
+var s2 = dom.find('#s2')[0];
+log(dom.siblings(s2));
+log(dom.next(s2));
 },{}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
